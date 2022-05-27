@@ -1,11 +1,3 @@
-# kube-azure-agent
-Containerized Azure Devops Self-Hosted pipeline agent.
-
----
-
-## Values file.
-
-```yaml
 replicaCount: 2
 
 image:
@@ -36,19 +28,4 @@ serviceAccount:
 
 imagePullSecrets: 
 - name: regcred
-```
 
-*Build only without parameters. (default name az-agents-trial)*
-
-```bash
-$ make build
-```
-
-*Build and push to remote registry.*
-
-```bash
-# Build and deploy to remote registry
-$ export DOCKERUSERNAME=[USERNAME]
-$ export DOCKERPASSWORD=[PASSWORD]
-$ make deploy
-```

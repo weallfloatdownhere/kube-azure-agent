@@ -3,7 +3,15 @@ Containerized Azure Devops Self-Hosted pipeline agent.
 
 ---
 
-## Values file.
+## Usage with helm.
+
+```bash
+helm upgrade --reset-values --install --create-namespace --kubeconfig $(pwd)/kube_config_cluster.yml --namespace rkeqa-ns-az --values $(pwd)/values.yml azagents ./helm
+```
+
+---
+
+## Values file (`values.yml`).
 
 ```yaml
 replicaCount: 2
